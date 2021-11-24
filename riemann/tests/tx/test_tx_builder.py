@@ -14,6 +14,7 @@ class TestTxBuilder(unittest.TestCase):
         riemann.select_network('bitcoin_main')
 
     def test_make_sh_output_script(self):
+        riemann.select_network('bitcoin_main')
         self.assertEqual(
             tb.make_sh_output_script('OP_IF'),
             helpers.OP_IF['output_script'])
